@@ -1,3 +1,4 @@
+import { LoginGuard } from './../../guards/login.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -9,7 +10,8 @@ const routes: Routes = [
     component: DashboardComponent,
     data: {
       title: $localize`Dashboard`
-    }
+    },
+    canActivate: [LoginGuard]
   }
 ];
 

@@ -3,9 +3,11 @@ import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@a
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { IonicModule } from '@ionic/angular';
 
 import {
-  PERFECT_SCROLLBAR_CONFIG,
+  PERFECT_SCROLLBAR_CONFIG, 
   PerfectScrollbarConfigInterface,
   PerfectScrollbarModule,
 } from 'ngx-perfect-scrollbar';
@@ -41,7 +43,8 @@ import {
   SharedModule,
   SidebarModule,
   TabsModule,
-  UtilitiesModule,
+  UtilitiesModule
+
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
@@ -82,9 +85,11 @@ const APP_CONTAINERS = [
     TabsModule,
     ListGroupModule,
     ProgressModule,
-    BadgeModule,
+    BadgeModule, 
     ListGroupModule,
     CardModule,
+    HttpClientModule,
+    IonicModule.forRoot(),
   ],
   providers: [
     {

@@ -1,3 +1,5 @@
+import { LoginGuard } from './guards/login.guard';
+import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -18,12 +20,18 @@ const routes: Routes = [
     component: DefaultLayoutComponent,
     data: {
       title: 'Home'
-    },
+    }
+    ,
     children: [
       {
         path: 'dashboard',
         loadChildren: () =>
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      },
+      {
+        path: 'general',
+        loadChildren: () =>
+          import('./views/general/general.module').then((m) => m.GeneralModule)
       },
       {
         path: 'theme',
